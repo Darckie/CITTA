@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: cursive;
+  background-color: rgb(255, 255, 255);
+}
+.container {
+  min-height: calc(100vh-40 * 2);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 13px;
+  overflow: hidden;
+}
+.login-left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-right {
+  background-color: rgb(219 117 210 / 61%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login-right img {
+  width: 100%;
+  border-radius: 100%;
+}
+.login-right img:hover {
+  transform: rotate(5000deg) scale(10%);
+  transition: 13s ease-in-out;
+}
+.login-header {
+  margin-bottom: 50px;
+}
+h1 {
+  padding: 7px;
+  font-size: 3rem;
+  font: 800;
+  font-family: " Haettenschweiler";
+  text-shadow: 8px 0px 4px rgb(53, 175, 116);
+}
+
+p {
+  padding: 7px;
+  font-size: 1.1rem;
+  opacity: 0.7;
+  font: 800;
+  font-family: "fantasy";
+}
+
+#login-form div {
+  margin: 37px 0;
+}
+
+#login-form {
+  width: 450px;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  &-footer- {
+    display: flex;
+    gap: 30px;
+    margin-top: 70px;
+  }
+}
+
+#login-form a {
+  flex: 6;
+  align-items: center;
+  border: 1px solid rgb(79, 68, 68);
+  gap: 15px;
+  border-radius: 100px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  width: 36%;
+}
+#login-form a:hover {
+  background-color: transparent;
+  transform: scale(75%);
+  transition: 0.7s ease-in-out;
+}
+
+.form-item label:not(.checkbox-label) {
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 12px;
+  position: absolute;
+  padding: 0 10px;
+  transform: translate(30px, -10px);
+  font-size: 13px;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 1px solid rgb(12, 10, 10);
+  height: 55px;
+  padding: 0 2rem;
+  width: 100%;
+  outline: none;
+  transition: background 0.5s;
+  font-size: 14px;
+  border-radius: 100px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.text placeholder {
+  font-size: 12px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: rgba(12, 113, 123, 0.456);
+}
+button:hover {
+  transform: scale(85%);
+  background-color: transparent;
+  transition: 0.5s ease-in-out;
+}
+button {
+  border: none;
+  background: linear-gradient(
+    45deg,
+    rgb(132, 11, 148),
+    rgba(12, 22, 209, 0.688)
+  );
+
+  color: white;
+  padding: 1rem;
+  border-radius: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  height: 55px;
+  cursor: pointer;
+  width: 100%;
+  margin: 13px;
+}
+
+input[type="date"] {
+  border: 1px solid rgb(12, 10, 10);
+  height: 55px;
+  padding: 0 2rem;
+  width: 100%;
+  outline: none;
+  transition: background 0.5s;
+  font-size: 18px;
+  border-radius: 100px;
+}
+
+.btn {
+  border: none;
+  background: linear-gradient(
+    45deg,
+    rgb(132, 11, 148),
+    rgba(156, 158, 199, 0.688)
+  );
+
+  padding: 1rem;
+  border-radius: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  height: 55px;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+}
+
+/* FOR RESPONSIVE PAGE LAYOUT */
+
+@media (max-width: 1350px) {
+  .login-left {
+    padding: 50px !important;
+  }
+  #login-form {
+    width: 100%;
+
+    &-footer {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  .container {
+    grid-template-columns: auto;
+  }
+  .login-right {
+    display: none;
+  }
+  .footer {
+    font-size: 12px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .footer a {
+    width: 50%;
+  }
+}

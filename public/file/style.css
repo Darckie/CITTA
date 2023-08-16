@@ -1,0 +1,171 @@
+body {
+  background-color: rgb(48, 171, 171);
+}
+.head {
+  display: flex;
+
+  flex-direction: column;
+  text-align: center;
+  /* align-items: center; */
+  padding: 2px;
+  margin: 12px;
+  background-color: rgba(125, 33, 33, 0.703);
+  box-shadow: 12px 12px 15px black;
+  border-radius: 40px 0px 40px 0px;
+  height: 35vh;
+}
+.head .top {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: 19px;
+}
+.head .guess {
+  font-family: Roboto;
+  font-weight: 800;
+  font-size: 89px;
+  border: solid 6px rgb(146, 131, 131);
+  border-radius: 500px;
+  height: 100px;
+  width: 100px;
+  margin-left: 500px;
+  background: linear-gradient(red, blue);
+  transition: 8s ease-in-out;
+}
+
+.guess:hover {
+  transform: rotate(720deg);
+  cursor: pointer;
+}
+.again {
+  background-color: rgba(112, 21, 93, 0.566);
+  border-radius: 14px;
+  height: 50px;
+  width: 70px;
+  color: beige;
+}
+.again:hover {
+  transform: scale(75%);
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+  padding: 12px;
+  height: 50vh;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 12px 12px 15px black;
+  width: 40%;
+  justify-content: space-around;
+  border-radius: 0px 40px 0px 0px;
+  margin: 12px;
+}
+.left textarea {
+  border-radius: 12px;
+  height: 70px;
+  width: 150px;
+  margin: 23px;
+  text-align: center;
+  border: 1px solid white;
+  padding: 2px;
+  font-size: 24px;
+  font-family: cursive;
+  background-color: rgb(195, 116, 129);
+  box-shadow: -5px -13px 12px rgba(148, 8, 160, 0.482);
+}
+
+.left .check {
+  background-color: rgba(112, 21, 93, 0.566);
+  border-radius: 14px;
+  height: 50px;
+  width: 70px;
+  color: beige;
+  margin-top: 34px;
+}
+.check:hover {
+  transform: scale(75%);
+  background-color: rgba(13, 12, 12, 0.801);
+}
+.right {
+  display: flex;
+  justify-content: center;
+  border-radius: 40px 0px 0px 0px;
+  text-align: center;
+  flex-direction: column;
+  font-size: large;
+  box-shadow: 12px 12px 15px black;
+  width: 50%;
+  background-color: burlywood;
+}
+
+/* //responsiveness */
+
+@media screen and (max-width: 777px) {
+  body {
+    background-color: olive;
+  }
+
+  .head {
+    padding: 2px;
+    margin: 8px;
+    background-color: rgba(32, 83, 6, 0.89);
+
+    height: 35vh;
+  }
+  .head .top {
+    font-size: 17px;
+  }
+  .container {
+    display: flex;
+
+    justify-content: space-around;
+    margin: 2px;
+    padding: 2px;
+    height: 50vh;
+  }
+  .head .guess {
+    margin-left: 250px;
+  }
+}
+@media screen and (max-width: 499px) {
+  .head {
+    padding: 2px;
+    margin: 8px;
+    background-color: rgba(32, 83, 6, 0.89);
+    height: 35vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+    padding: 2px;
+    height: 100vh;
+  }
+  .head .top {
+    font-size: 13px;
+  }
+  .head .guess {
+    margin-left: 200px;
+  }
+  .left {
+    width: 90%;
+    height: 200px;
+    margin: 0;
+  }
+  .right {
+    width: 90%;
+    height: 200px;
+    margin: 0;
+    margin-bottom: 130px;
+  }
+}
